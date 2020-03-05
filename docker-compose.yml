@@ -1,6 +1,7 @@
 version: '3'
 services:
   web:
+    container_name: web
     image: nginx:latest
     ports:
       - "8080:80"
@@ -13,12 +14,17 @@ services:
     depends_on:
       - mysql
   php:
-    image: php:7.4-fpm
+    container_name: php
+    build:
+      dockerfile: dockerfiles/Dockerfile
+      context: .
     volumes:
       - ./:/app
   mysql:
-    image: mysql:latest
+    container_name: mysql
+    image: mysql:5.7
     environment:
       MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: taylorandhart
     ports:
       - "3306:3306"
