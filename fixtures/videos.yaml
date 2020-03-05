@@ -1,0 +1,21 @@
+App\Entity\Video:
+  video_1:
+    name: How To Master 5 Basic Cooking Skills - Gordon Ramsay
+    youtubeUrl: https://www.youtube.com/watch?v=ZJy1ajvMU1k
+    embed: '<iframe width="560" height="315" src="https://www.youtube.com/embed/ZJy1ajvMU1k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+  video_2:
+    name: How To Make Pan Seared Butter-Basted Steak
+    youtubeUrl: https://www.youtube.com/watch?v=kbpIYAnt-7k
+    embed: '<iframe width="560" height="315" src="https://www.youtube.com/embed/kbpIYAnt-7k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+  video_3:
+    name: Unseen Pasta And Bolognese Recipes From Gordon Ramsay - Almost Anything
+    youtubeUrl: https://www.youtube.com/watch?v=4QDw_VvC0AQ
+    embed: '<iframe width="560" height="315" src="https://www.youtube.com/embed/4QDw_VvC0AQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+  video_4:
+    name: Gordon Ramsay Makes Breakfast Burgers & A Special Beef Wellington
+    youtubeUrl: https://www.youtube.com/watch?v=5ZHiN7GZxSc
+    embed: '<iframe width="560" height="315" src="https://www.youtube.com/embed/5ZHiN7GZxSc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+  video_5:
+    name: The Ultimate Steak Sandwich - Gordon Ramsay
+    youtubeUrl: https://www.youtube.com/watch?v=jwu2y9x5OlM
+    embed: '<iframe width="560" height="315" src="https://www.youtube.com/embed/jwu2y9x5OlM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
