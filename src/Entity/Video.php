@@ -26,6 +26,11 @@ class Video
      */
     private $youtubeUrl;
 
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $embed;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -51,6 +56,18 @@ class Video
     public function setYoutubeUrl(string $youtubeUrl): self
     {
         $this->youtubeUrl = $youtubeUrl;
+
+        return $this;
+    }
+
+    public function getEmbed(): ?string
+    {
+        return $this->embed;
+    }
+
+    public function setEmbed(string $embed): self
+    {
+        $this->embed = $embed;
 
         return $this;
     }
