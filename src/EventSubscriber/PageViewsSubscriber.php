@@ -20,6 +20,7 @@ class PageViewsSubscriber implements EventSubscriberInterface
     {
         if (null !== $token = $tokenStorage->getToken()) {
             if (\is_object($user = $token->getUser())) {
+                /** @var User $user */
                 $this->user = $user;
             }
         }
@@ -38,7 +39,6 @@ class PageViewsSubscriber implements EventSubscriberInterface
         if(strpos($route, self::ROUTE_VIEW_VIDEO) !== false) {
 
             // update views and last view time
-            echo $this->user->getId();
             $this->user->setViews($this->user->getViews() + 1);
             $this->user->setLastViewAt(new \DateTime());
 
