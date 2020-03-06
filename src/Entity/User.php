@@ -35,6 +35,16 @@ class User implements UserInterface
      */
     private $password;
 
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $views;
+
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $last_view_at;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -111,5 +121,29 @@ class User implements UserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    public function getViews(): ?int
+    {
+        return $this->views;
+    }
+
+    public function setViews(?int $views): self
+    {
+        $this->views = $views;
+
+        return $this;
+    }
+
+    public function getLastViewAt(): ?\DateTimeInterface
+    {
+        return $this->last_view_at;
+    }
+
+    public function setLastViewAt(?\DateTimeInterface $last_view_at): self
+    {
+        $this->last_view_at = $last_view_at;
+
+        return $this;
     }
 }
