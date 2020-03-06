@@ -20,7 +20,8 @@
     },
     "require-dev": {
         "hautelook/alice-bundle": "^2.7",
-        "symfony/maker-bundle": "^1.14"
+        "symfony/maker-bundle": "^1.14",
+        "symfony/phpunit-bridge": "^5.0"
     },
     "config": {
         "preferred-install": {
