@@ -8,7 +8,7 @@
     <body>
     {% if not app.user %}
     <a href="{{ path('app_login') }}">Login to view courses</a> | <a href="{{ path('app_register') }}">Register</a>
-    {%  else  %}Hello {{ app.user.username }}
+    {%  else  %}Hello {{ app.user.username }} | <a href="{{  path('app_logout') }}">Logout</a>
     {%  endif %}
     {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
