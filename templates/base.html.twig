@@ -6,7 +6,11 @@
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+    {% if not app.user %}
+    <a href="{{ path('app_login') }}">Login to view courses</a> | <a href="{{ path('app_register') }}">Register</a>
+    {%  else  %}Hello {{ app.user.username }}
+    {%  endif %}
+    {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
 </html>
