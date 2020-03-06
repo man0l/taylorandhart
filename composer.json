@@ -19,6 +19,7 @@
         "symfony/yaml": "5.0.*"
     },
     "require-dev": {
+        "dg/bypass-finals": "^1.1",
         "hautelook/alice-bundle": "^2.7",
         "symfony/maker-bundle": "^1.14",
         "symfony/phpunit-bridge": "^5.0"
