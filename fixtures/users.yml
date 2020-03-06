@@ -1,0 +1,15 @@
+parameters:
+  hash: "$argon2id$v=19$m=65536,t=4,p=1$UFh2Ddlw/ZwGIKRW+06gyw$xXXxV5zTrwJ9R928lijc72QpR3LnPPffunvEMLb0DKI"
+App\Entity\User:
+  user_1:
+    email: <email()>
+    password: <{hash}>
+    roles: []
+    is_admin: false
+  user_2:
+    email: <email()>
+    password: <{hash}>
+    roles: []
+    is_admin: true
+
+
