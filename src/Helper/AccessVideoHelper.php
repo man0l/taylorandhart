@@ -16,7 +16,7 @@ class AccessVideoHelper
         return (
             $user->getIsAdmin() ||
             ($user->getViews() > $configViewsNum && $now > $date) ||
-            ($user->getViews() < $configViewsNum)
+            ($user->getViews() <= $configViewsNum)
         );
     }
 }
