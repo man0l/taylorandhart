@@ -8,7 +8,8 @@ class AccessVideoHelper
     static User $user;
     static function hasAccess(UserInterface $user, $configViewsNum = 10, $configWaitTimeInSeconds = 3600) {
 
-        $date = clone $user->getLastViewAt() ?? new \DateTime();
+
+        $date = ($user->getLastViewAt() !== null) ? clone $user->getLastViewAt() : new \DateTime();
 
         $date->modify(sprintf('+%s seconds', $configWaitTimeInSeconds));
         $now = new \DateTime();
