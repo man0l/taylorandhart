@@ -2,6 +2,7 @@
 
 namespace App\Helper;
 use Symfony\Component\Security\Core\User\UserInterface;
+use App\Entity\User;
 
 class AccessVideoHelper
 {
