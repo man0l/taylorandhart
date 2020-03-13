@@ -15,7 +15,7 @@
     <div class="embed">
         {{  video.embed | raw }}
     </div>
-    {% else if app.user %}
+    {% elseif app.user %}
         {% set date = app.user.lastViewAt.modify('+' ~ wait_time_seconds ~ ' seconds') %}
         {% set difference = date(date).diff(date()) %}
         You have watched courses more than {{ max_views }} times. Please wait {{  difference.format('%d days %h hours %i minutes and %s seconds') }}
