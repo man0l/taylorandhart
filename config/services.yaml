@@ -25,10 +25,6 @@ services:
     App\Controller\:
         resource: '../src/Controller'
         tags: ['controller.service_arguments']
-    App\EventSubscriber\PageViewsSubscriber:
-        bind:
-            $configViewsNum: '%max_views%'
-            $configWaitTimeInSeconds: '%wait_time_seconds%'
     App\Security\UserVoter:
         bind:
             $configViewsNum: '%max_views%'
