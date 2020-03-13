@@ -11,7 +11,7 @@
 <div class="example-wrapper">
     <h1>{{ video.name }}</h1>
 
-    {%  if access %}
+    {%  if hasAccess %}
     <div class="embed">
         {{  video.embed | raw }}
     </div>
