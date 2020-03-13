@@ -5,11 +5,9 @@ App\Entity\User:
     email: <email()>
     password: <{hash}>
     roles: []
-    is_admin: false
   user_2:
     email: <email()>
     password: <{hash}>
-    roles: []
-    is_admin: true
+    roles: [ROLE_ADMIN]
 
 
