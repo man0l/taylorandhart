@@ -12,13 +12,12 @@ class UserVoter extends Voter
 {
 
     const VIEW = 'view';
-    private $security;
+    //private $security;
     private $configViewsNum;
     private $configWaitTimeInSeconds;
 
-    public function __construct(Security $security, $configViewsNum, $configWaitTimeInSeconds)
+    public function __construct($configViewsNum, $configWaitTimeInSeconds)
     {
-        $this->security = $security;
         $this->configViewsNum          = (int)$configViewsNum;
         $this->configWaitTimeInSeconds = (int)$configWaitTimeInSeconds;
     }
@@ -61,7 +60,7 @@ class UserVoter extends Voter
             return false;
         }
 
-        if($this->security->isGranted('ROLE_ADMIN')) {
+        if(in_array("ROLE_ADMIN", $user->getRoles())) {
             return true;
         }
 
