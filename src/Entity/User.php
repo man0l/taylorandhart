@@ -43,17 +43,8 @@ class User implements UserInterface
     /**
      * @ORM\Column(type="datetime", nullable=true)
      */
-    private $last_view_at;
+    private $lastViewAt;
 
-    /**
-     * @ORM\Column(type="boolean")
-     */
-    private $is_admin;
-
-    public function __construct()
-    {
-        $this->is_admin = false;
-    }
 
     public function getId(): ?int
     {
@@ -147,25 +138,14 @@ class User implements UserInterface
 
     public function getLastViewAt(): ?\DateTimeInterface
     {
-        return $this->last_view_at;
+        return $this->lastViewAt;
     }
 
-    public function setLastViewAt(?\DateTimeInterface $last_view_at): self
+    public function setLastViewAt(?\DateTimeInterface $lastViewAt): self
     {
-        $this->last_view_at = $last_view_at;
+        $this->lastViewAt = $lastViewAt;
 
         return $this;
     }
 
-    public function getIsAdmin(): ?bool
-    {
-        return $this->is_admin;
-    }
-
-    public function setIsAdmin(bool $is_admin): self
-    {
-        $this->is_admin = $is_admin;
-
-        return $this;
-    }
 }
