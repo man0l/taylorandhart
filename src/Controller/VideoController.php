@@ -28,7 +28,7 @@ class VideoController extends AbstractController
             // update the user
             $user = $this->getUser();
             if(\is_object($user)) {
-                $user->setViews($this->user->getViews() + 1);
+                $user->setViews($user->getViews() + 1);
                 $user->setLastViewAt(new \DateTime());
                 $entityManager->flush();
             }
